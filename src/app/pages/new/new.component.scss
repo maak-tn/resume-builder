@@ -1,0 +1,21 @@
+#newwResumeContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    #paper {
+        width: 700px;
+        height: 100%;
+        margin: 2rem auto;
+        // background-color: #fff;
+        color: #262626;
+
+        // FORM STYLING
+    }
+
+    #saveButton {
+        position: fixed;
+        right: 2rem;
+        bottom: 1rem;
+    }
+}

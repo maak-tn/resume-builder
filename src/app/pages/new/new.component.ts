@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Form, FormGroup, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-new',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent implements OnInit {
 
-  constructor() { }
+  paperForm!: FormGroup;
+
+
+  constructor(
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit(): void {
+    this.initPaperForm();
   }
 
+  initPaperForm() {
+    this.paperForm = this.fb.group({
+    })
+  }
 }
