@@ -8,11 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // MATERIAL
 import { MaterialModule } from './material.module';
 import { HomeComponent } from './pages/home/home.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { NewComponent } from './pages/new/new.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,
