@@ -1,6 +1,18 @@
 <section id="newwResumeContainer">
     <div id="paper">
-        <form [formGroup]="paperForm">
+        <form [formGroup]="paperForm" id="paperOuterForm">
+
+            <!-- FULL NAME -->
+            <input formControlName="personName" placeholder="Jhon Doe" id="nameInput">
+
+            <!-- POSITION -->
+            <input formControlName="personPosition" placeholder="Full Stack Developer" id="positionInput">
+
+
+            <!-- BIO -->
+            <label class="sectionHeader">Profile</label>
+            <textarea matInput formControlName="personBio" placeholder="I am a full stack web developer..." id="bioInput"></textarea>
+
 
         </form>
         <!-- END OF PAPER -->

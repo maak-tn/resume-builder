@@ -22,6 +22,9 @@ export class NewComponent implements OnInit {
 
   initPaperForm() {
     this.paperForm = this.fb.group({
+      personName: [],
+      personPosition: [],
+      personBio: [],
     })
   }
 }
