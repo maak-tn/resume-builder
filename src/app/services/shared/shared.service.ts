@@ -7,9 +7,9 @@ import { BehaviorSubject } from 'rxjs';
 export class SharedService {
 
   // RESUME SECTIONS
-  experienceSection = new BehaviorSubject(true)
-  skillsSection = new BehaviorSubject(false)
-  languagesSection = new BehaviorSubject(true)
+  experienceSection = new BehaviorSubject(true);
+  skillsSection = new BehaviorSubject(false);
+  languagesSection = new BehaviorSubject(true);
 
   constructor() { }
 }

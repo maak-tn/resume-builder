@@ -6,9 +6,9 @@
     <h3>Configure resume sections</h3>
 
     <div>
-        <mat-slide-toggle [(ngModel)]="experienceIsChecked" name="enableExperience">Enable Experience section</mat-slide-toggle>
-        <mat-slide-toggle [(ngModel)]="skillsIsChecked" name="enableSkills">Enable Skills section</mat-slide-toggle>
-        <mat-slide-toggle [(ngModel)]="languagesIsChecked" name="enableLanguages">Enable Languages section</mat-slide-toggle>
+        <mat-slide-toggle [(ngModel)]="experienceIsChecked" name="enableExperience" (change)="toggleExperience($event)">Enable Experience section</mat-slide-toggle>
+        <mat-slide-toggle [(ngModel)]="skillsIsChecked" name="enableSkills" (change)="toggleSkills($event)">Enable Skills section</mat-slide-toggle>
+        <mat-slide-toggle [(ngModel)]="languagesIsChecked" name="enableLanguages" (change)="toggleLanguages($event)">Enable Languages section</mat-slide-toggle>
     </div>
 
 </mat-dialog-content>
