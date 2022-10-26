@@ -6,6 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatChipsModule } from '@angular/material/chips';
 
 
 
@@ -17,7 +18,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatFormFieldModule,
     MatInputModule,
     MatDialogModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatChipsModule
   ]
 })
 export class MaterialModule { }
