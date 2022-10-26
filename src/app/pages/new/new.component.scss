@@ -67,40 +67,35 @@
 
 
     // FORM ARRAYS
+    #languagesSection {
+        margin-top: 1rem;
+    }
 
-    // SKILLS
-    #skillsSection {
+    // SKILLS + LANGUAGEQ
+    .entityInput {
         width: 100%;
+        height: 30px;
+        margin-top: .3rem;
+        position: relative;
+        border: 1px dashed #262626;
+        background-color: #efefef;
+        display: flex;
+        align-items: center;
 
-        .skillInput {
-            width: 100%;
-            height: 30px;
-            margin-top: .3rem;
-            position: relative;
-            border: 1px dashed #262626;
+        .controls {
+            position: absolute;
+            right: -12px;
+            top: -12px;
 
-            display: flex;
-            align-items: center;
-
-            input {
-                background-color: transparent;
-            }
-
-            .controls {
-                position: absolute;
-                right: -12px;
-                top: -12px;
-
-                button {
-                    padding: 0;
-                    margin-left: .2rem;
-                    font-size: .5rem;
-                    border: none;
-                    border-radius: 50%;
-                    outline: none;
-                    background-color: #262626;
-                    color: #fff;
-                }
+            button {
+                padding: 0;
+                margin-left: .2rem;
+                font-size: .5rem;
+                border: none;
+                border-radius: 50%;
+                outline: none;
+                background-color: #262626;
+                color: #fff;
             }
         }
     }

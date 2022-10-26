@@ -35,7 +35,7 @@
                     <section id="skillsSection" *ngIf="this.ss.skillsSection.getValue()">
                         <app-section-header [headerTitle]="'skills'"></app-section-header>
                         <div formArrayName="skillsArray">
-                            <div *ngFor="let tmpFormGroup of getskillsFormArray.controls; let i = index" [formGroupName]="i" class="skillInput">
+                            <div *ngFor="let tmpFormGroup of getskillsFormArray.controls; let i = index" [formGroupName]="i" class="entityInput">
                                 <div class="controls">
                                     <button (click)="addNewGroupToSkillsArray($event)" class="newSkillButton">
                                         <mat-icon>add</mat-icon>
@@ -53,14 +53,19 @@
                     <!-- LANGUAGES -->
                     <section id="languagesSection" *ngIf="this.ss.languagesSection.getValue()">
                         <app-section-header [headerTitle]="'languages'"></app-section-header>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                        </ul>
+                        <div formArrayName="languagesArray">
+                            <div *ngFor="let tmpFormGroup of getLanguagesFormArray.controls; let i = index" [formGroupName]="i" class="entityInput">
+                                <div class="controls">
+                                    <button (click)="addNewGroupToLanguagesArray($event)">
+                                        <mat-icon>add</mat-icon>
+                                    </button>
+                                    <button (click)="removeGroupFromLanguagesArray(i)">
+                                        <mat-icon>remove</mat-icon>
+                                    </button>
+                                </div>
+                                <input matInput formControlName="languageTitle">
+                            </div>
+                        </div>
                     </section>
                 </div>
             </section>

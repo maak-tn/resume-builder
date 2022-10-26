@@ -24,7 +24,8 @@ export class NewComponent implements OnInit {
       personName: [],
       personPosition: [],
       personBio: [],
-      skillsArray: this.fb.array([{ skillTitle: [null] }])
+      skillsArray: this.fb.array([{ skillTitle: [null] }]),
+      languagesArray: this.fb.array([{ languageTitle: ['English'] }])
     })
   }
 
@@ -32,7 +33,12 @@ export class NewComponent implements OnInit {
     return this.paperForm.get('skillsArray') as FormArray;
   }
 
+  public get getLanguagesFormArray(): FormArray {
+    return this.paperForm.get('languagesArray') as FormArray;
+  }
+
   // form Array handlers
+  // ========= SKILLS =========
   addNewGroupToSkillsArray(event: any) {
     event.preventDefault();
     const newSkillFormGroup = this.fb.group({
@@ -44,5 +50,20 @@ export class NewComponent implements OnInit {
   removeGroupToSkillsArray(index: number) {
     if (index !== 0)
       this.getskillsFormArray.removeAt(index);
+  }
+
+
+  // ========= LANGUAGES =========
+  addNewGroupToLanguagesArray(event: any) {
+    event.preventDefault();
+    const newLanguageFormGroup = this.fb.group({
+      languageTitle: [null]
+    })
+    this.getLanguagesFormArray.push(newLanguageFormGroup);
+  }
+
+  removeGroupFromLanguagesArray(index: number) {
+    if (index !== 0)
+      this.getLanguagesFormArray.removeAt(index);
   }
 }
