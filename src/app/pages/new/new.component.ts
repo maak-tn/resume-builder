@@ -18,12 +18,11 @@ export class NewComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private ss: SharedService
+    public ss: SharedService
   ) { }
 
   ngOnInit(): void {
     this.initPaperForm();
-    this.setSections();
   }
 
   initPaperForm() {
@@ -32,12 +31,5 @@ export class NewComponent implements OnInit {
       personPosition: [],
       personBio: [],
     })
-  }
-
-  // DISPLAY RESUME SECTIONS
-  setSections() {
-    this.showExperienceSection = this.ss.experienceSection.getValue();
-    this.showSkillsSection = this.ss.skillsSection.getValue();
-    this.showLanguagesSection = this.ss.languagesSection.getValue();
   }
 }

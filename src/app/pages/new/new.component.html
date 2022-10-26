@@ -17,7 +17,7 @@
             <section id="cvFlexDivider">
                 <div id="leftSection">
                     <!-- WORK EXPERSIENCE -->
-                    <section id="experienceSection" *ngIf="showExperienceSection">
+                    <section id="experienceSection" *ngIf="this.ss.experienceSection.getValue()">
                         <app-section-header [headerTitle]="'experience'"></app-section-header>
                         <ul>
                             <li>Lorem ipsum dolor sit amet.</li>
@@ -32,7 +32,7 @@
                 </div>
                 <div id="rightSection">
                     <!-- SKILLS -->
-                    <section id="skillsSection" *ngIf="showSkillsSection">
+                    <section id="skillsSection" *ngIf="this.ss.skillsSection.getValue()">
                         <app-section-header [headerTitle]="'skills'"></app-section-header>
                         <ul>
                             <li>Lorem ipsum dolor sit amet.</li>
@@ -45,7 +45,7 @@
                     </section>
 
                     <!-- LANGUAGES -->
-                    <section id="languagesSection" *ngIf="showLanguagesSection">
+                    <section id="languagesSection" *ngIf="this.ss.languagesSection.getValue()">
                         <app-section-header [headerTitle]="'languages'"></app-section-header>
                         <ul>
                             <li>Lorem ipsum dolor sit amet.</li>
