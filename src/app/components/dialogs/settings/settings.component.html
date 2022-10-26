@@ -5,6 +5,12 @@
 <mat-dialog-content class="mat-typography">
     <h3>Configure resume sections</h3>
 
+    <div>
+        <mat-slide-toggle [(ngModel)]="experienceIsChecked" name="enableExperience">Enable Experience section</mat-slide-toggle>
+        <mat-slide-toggle [(ngModel)]="skillsIsChecked" name="enableSkills">Enable Skills section</mat-slide-toggle>
+        <mat-slide-toggle [(ngModel)]="languagesIsChecked" name="enableLanguages">Enable Languages section</mat-slide-toggle>
+    </div>
+
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Close</button>
