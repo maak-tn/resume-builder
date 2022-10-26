@@ -10,12 +10,6 @@ import { SharedService } from 'src/app/services/shared/shared.service';
 export class NewComponent implements OnInit {
 
   paperForm!: FormGroup;
-
-  // RESUME SECTIONS
-  showExperienceSection: any;
-  showSkillsSection: any;
-  showLanguagesSection: any;
-
   constructor(
     private fb: FormBuilder,
     public ss: SharedService

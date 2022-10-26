@@ -8,7 +8,7 @@ export class SharedService {
 
   // RESUME SECTIONS
   experienceSection = new BehaviorSubject(true);
-  skillsSection = new BehaviorSubject(false);
+  skillsSection = new BehaviorSubject(true);
   languagesSection = new BehaviorSubject(true);
 
   constructor() { }
