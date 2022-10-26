@@ -12,6 +12,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NewComponent } from './pages/new/new.component';
 import { SectionHeaderComponent } from './components/reusable/section-header/section-header.component';
+import { SettingsComponent } from './components/dialogs/settings/settings.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SectionHeaderComponent } from './components/reusable/section-header/sec
     HomeComponent,
     SidenavComponent,
     NewComponent,
-    SectionHeaderComponent
+    SectionHeaderComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
