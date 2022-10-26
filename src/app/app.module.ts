@@ -11,13 +11,15 @@ import { MaterialModule } from './material.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NewComponent } from './pages/new/new.component';
+import { SectionHeaderComponent } from './components/reusable/section-header/section-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SidenavComponent,
-    NewComponent
+    NewComponent,
+    SectionHeaderComponent
   ],
   imports: [
     BrowserModule,
