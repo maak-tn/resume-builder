@@ -25,7 +25,7 @@ export class NewComponent implements OnInit {
       personPosition: [],
       personBio: [],
       skillsArray: this.fb.array([{ skillTitle: [null] }]),
-      languagesArray: this.fb.array([{ languageTitle: ['English'] }])
+      languagesArray: this.fb.array([{ languageTitle: [null] }])
     })
   }
 
