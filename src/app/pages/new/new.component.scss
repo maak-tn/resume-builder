@@ -5,33 +5,26 @@
 
     #paper {
         width: 700px;
-        height: 100%;
+        min-height: 100%;
+        height: auto;
         margin: 2rem auto;
         padding: 3rem;
         background-color: #fff;
         color: #262626;
 
-        // FORM STYLING
-        #paperOuterForm {
-            width: 100%;
-            display: grid;
-            grid-gap: 1rem;
-        }
-
         input,
         textarea {
-            background-color: #efefef;
             padding: .2rem 1rem;
             outline: none;
             border: none;
             color: #262626;
+            background-color: #efefef;
 
             &::placeholder {
                 color: #262626;
             }
         }
 
-        // INDIVIDUAL INPUTS STYLING
         #nameInput {
             font-size: 2rem;
         }
@@ -41,62 +34,97 @@
             height: 60px;
         }
 
+        .slSharedSpace {
+            justify-content: space-between;
 
-        // flex
-        #cvFlexDivider {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
+            section {
+                width: 100%;
 
-            #leftSection {
-                width: 400px;
-                margin-right: 1rem;
-            }
+                input {
+                    margin-bottom: .2rem;
+                }
 
-            #rightSection {
-                width: calc(100% - 400px);
+                &:nth-child(1) {
+                    margin-right: .3rem;
+                }
             }
         }
     }
 
-    #saveButton {
-        position: fixed;
-        right: 2rem;
-        bottom: 1rem;
-    }
-
-
-    // FORM ARRAYS
-    #languagesSection {
-        margin-top: 1rem;
-    }
-
-    // SKILLS + LANGUAGEQ
-    .entityInput {
+    // SECTIONS
+    .experienceContainer {
         width: 100%;
-        height: 30px;
-        margin-top: .3rem;
+        padding: .5rem;
+        margin-top: .5rem;
         position: relative;
         border: 1px dashed #262626;
-        background-color: #efefef;
-        display: flex;
-        align-items: center;
 
-        .controls {
-            position: absolute;
-            right: -12px;
-            top: -12px;
+        .experienceDate {
+            width: 160px;
+            margin-right: .5rem;
+        }
 
-            button {
-                padding: 0;
-                margin-left: .2rem;
-                font-size: .5rem;
-                border: none;
-                border-radius: 50%;
-                outline: none;
-                background-color: #262626;
-                color: #fff;
+        .flexRightSection {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            input {
+                display: block;
+                max-width: inherit;
+                margin-bottom: .2rem;
+            }
+
+            // INDIVIDUAL INPUTS
+
+            .experienceposition {
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+
+            .experienceCompany {
+                font-size: 1.1rem;
+                font-weight: 400;
+                color: #262626;
+            }
+
+            .experienceDescription {
+                font-size: 1rem;
+                line-height: 1.5;
             }
         }
+    }
+}
+
+
+// SHARED STYLES
+.flexRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.elementsContainer {
+    border: 1px dashed #262626;
+    position: relative;
+    background-color: #efefef;
+    margin-bottom: .2rem;
+}
+
+.controls {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+
+    button {
+        padding: 0;
+        margin-left: .2rem;
+        font-size: .5rem;
+        border: none;
+        border-radius: 50%;
+        outline: none;
+        background-color: #262626;
+        color: #fff;
     }
 }

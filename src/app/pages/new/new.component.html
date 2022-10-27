@@ -1,80 +1,78 @@
 <section id="newwResumeContainer">
     <div id="paper">
-        <form [formGroup]="paperForm" id="paperOuterForm">
-
+        <form [formGroup]="paperForm">
             <!-- FULL NAME -->
             <input formControlName="personName" placeholder="Jhon Doe" id="nameInput">
-
             <!-- POSITION -->
             <input formControlName="personPosition" placeholder="Full Stack Developer" id="positionInput">
-
-
             <!-- BIO -->
             <app-section-header [headerTitle]="'profile'"></app-section-header>
             <textarea matInput formControlName="personBio" placeholder="I am a full stack web developer..." id="bioInput"></textarea>
 
-
-            <section id="cvFlexDivider">
-                <div id="leftSection">
-                    <!-- WORK EXPERSIENCE -->
-                    <section id="experienceSection" *ngIf="this.ss.experienceSection.getValue()">
-                        <app-section-header [headerTitle]="'experience'"></app-section-header>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                        </ul>
-                    </section>
-
-                </div>
-                <div id="rightSection">
-                    <!-- SKILLS -->
-                    <section id="skillsSection" *ngIf="this.ss.skillsSection.getValue()">
-                        <app-section-header [headerTitle]="'skills'"></app-section-header>
-                        <div formArrayName="skillsArray">
-                            <div *ngFor="let tmpFormGroup of getskillsFormArray.controls; let i = index" [formGroupName]="i" class="entityInput">
-                                <div class="controls">
-                                    <button (click)="addNewGroupToSkillsArray($event)" class="newSkillButton">
-                                        <mat-icon>add</mat-icon>
-                                    </button>
-                                    <button (click)="removeGroupToSkillsArray(i)" class="removeSkillButton">
-                                        <mat-icon>remove</mat-icon>
-                                    </button>
-                                </div>
-                                <input matInput formControlName="skillTitle" placeholder="JavaScript">
-                            </div>
+            <!-- WORK EXPERSIENCE -->
+            <section id="experienceSection" *ngIf="this.ss.experienceSection.getValue()">
+                <app-section-header [headerTitle]="'experience'"></app-section-header>
+                <div formArrayName="experienceArray">
+                    <div *ngFor="let tmpFormGroup of geExpeienceFormArray.controls; let i = index" [formGroupName]="i" class="flexRow experienceContainer">
+                        <div class="controls">
+                            <button (click)="removeGroupFromExpeienceArray(i)">
+                                <mat-icon>remove</mat-icon>
+                            </button>
                         </div>
-                        <!-- end of conditional section -->
-                    </section>
-
-                    <!-- LANGUAGES -->
-                    <section id="languagesSection" *ngIf="this.ss.languagesSection.getValue()">
-                        <app-section-header [headerTitle]="'languages'"></app-section-header>
-                        <div formArrayName="languagesArray">
-                            <div *ngFor="let tmpFormGroup of getLanguagesFormArray.controls; let i = index" [formGroupName]="i" class="entityInput">
-                                <div class="controls">
-                                    <button (click)="addNewGroupToLanguagesArray($event)">
-                                        <mat-icon>add</mat-icon>
-                                    </button>
-                                    <button (click)="removeGroupFromLanguagesArray(i)">
-                                        <mat-icon>remove</mat-icon>
-                                    </button>
-                                </div>
-                                <input matInput formControlName="languageTitle" placeholder="Arabic, ...">
-                            </div>
+                        <input type="text" placeholder="Apr 2020 - Dec 2022" formControlName="experienceDate" class="experienceDate">
+                        <div class="flexRightSection">
+                            <input type="text" placeholder="Full Stack web developer" formControlName="experienceposition" class="experienceposition">
+                            <input type="text" placeholder="Faceboook" formControlName="experienceCompany" class="experienceCompany">
+                            <textarea matInput formControlName="experienceDescription" placeholder="Desribe what you did..." class="experienceDescription"></textarea>
                         </div>
-                    </section>
+                    </div>
                 </div>
+                <button (click)="addNewGroupToExpeienceArray($event)" class="newGroupTrigger">
+                    <mat-icon>add</mat-icon>
+                </button>
             </section>
 
+            <section class="flexRow slSharedSpace">
+                <!-- SKILLS -->
+                <section id="skillsSection" *ngIf="this.ss.skillsSection.getValue()">
+                    <app-section-header [headerTitle]="'skills'"></app-section-header>
+                    <div formArrayName="skillsArray">
+                        <div *ngFor="let tmpFormGroup of getskillsFormArray.controls; let i = index" [formGroupName]="i" class="elementsContainer">
+                            <div class="controls">
+                                <button (click)="removeGroupToSkillsArray(i)" class="removeSkillButton">
+                                    <mat-icon>remove</mat-icon>
+                                </button>
+                            </div>
+                            <input matInput formControlName="skillTitle" placeholder="JavaScript">
+                        </div>
+                    </div>
+                    <button (click)="addNewGroupToSkillsArray($event)" class="newSkillButton" class="newGroupTrigger">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                    <!-- end of conditional section -->
+                </section>
 
+                <!-- LANGUAGES -->
+                <section id="languagesSection" *ngIf="this.ss.languagesSection.getValue()">
+                    <app-section-header [headerTitle]="'languages'"></app-section-header>
+                    <div formArrayName="languagesArray">
+                        <div *ngFor="let tmpFormGroup of getLanguagesFormArray.controls; let i = index" [formGroupName]="i" class="elementsContainer">
+                            <div class="controls">
+                                <button (click)="removeGroupFromLanguagesArray(i)">
+                                    <mat-icon>remove</mat-icon>
+                                </button>
+                            </div>
+                            <input matInput formControlName="languageTitle" placeholder="Arabic, ...">
+                        </div>
+                    </div>
+                    <button (click)="addNewGroupToLanguagesArray($event)" class="newGroupTrigger">
+                        <mat-icon>add</mat-icon>
+                    </button>
+                </section>
+            </section>
         </form>
         <!-- END OF PAPER -->
     </div>
-
     <button mat-mini-fab color="primary" id="saveButton">
         <mat-icon>save</mat-icon>
     </button>

@@ -24,8 +24,9 @@ export class NewComponent implements OnInit {
       personName: [],
       personPosition: [],
       personBio: [],
-      skillsArray: this.fb.array([{ skillTitle: [null] }]),
-      languagesArray: this.fb.array([{ languageTitle: [null] }])
+      skillsArray: this.fb.array([]),
+      languagesArray: this.fb.array([]),
+      experienceArray: this.fb.array([])
     })
   }
 
@@ -35,6 +36,10 @@ export class NewComponent implements OnInit {
 
   public get getLanguagesFormArray(): FormArray {
     return this.paperForm.get('languagesArray') as FormArray;
+  }
+
+  public get geExpeienceFormArray(): FormArray {
+    return this.paperForm.get('experienceArray') as FormArray;
   }
 
   // form Array handlers
@@ -48,8 +53,7 @@ export class NewComponent implements OnInit {
   }
 
   removeGroupToSkillsArray(index: number) {
-    if (index !== 0)
-      this.getskillsFormArray.removeAt(index);
+    this.getskillsFormArray.removeAt(index);
   }
 
 
@@ -63,7 +67,23 @@ export class NewComponent implements OnInit {
   }
 
   removeGroupFromLanguagesArray(index: number) {
-    if (index !== 0)
-      this.getLanguagesFormArray.removeAt(index);
+    this.getLanguagesFormArray.removeAt(index);
+  }
+
+
+  // ========= EXPERIENCE =========
+  addNewGroupToExpeienceArray(event: any) {
+    event.preventDefault();
+    const newExperienceFormGroup = this.fb.group({
+      experienceposition: [null],
+      experienceCompany: [null],
+      experienceDate: [null],
+      experienceDescription: [null]
+    })
+    this.geExpeienceFormArray.push(newExperienceFormGroup);
+  }
+
+  removeGroupFromExpeienceArray(index: number) {
+    this.geExpeienceFormArray.removeAt(index);
   }
 }
