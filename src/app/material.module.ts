@@ -9,6 +9,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatListModule } from '@angular/material/list';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatSlideToggleModule,
     MatChipsModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule
   ]
 })
 export class MaterialModule { }
