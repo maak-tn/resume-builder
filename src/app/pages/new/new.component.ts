@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewComponent implements OnInit {
 
+  noTemplatePreviewAvailable = 'https://imgur.com/k4Tg2Kh.png';
   constructor() { }
 
   ngOnInit(): void {

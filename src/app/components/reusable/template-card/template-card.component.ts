@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-template-card',
@@ -16,10 +17,17 @@ export class TemplateCardComponent implements OnInit {
   @Input()
   previewUrl: any;
 
+  @Input()
+  templateTag: any;
 
-  constructor() { }
+
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  useTemplate(templateTag: string) {
+    this._router.navigate(['/new', templateTag])
   }
 
 }

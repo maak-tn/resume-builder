@@ -14,6 +14,7 @@ import { NewComponent } from './pages/new/new.component';
 import { SectionHeaderComponent } from './components/reusable/section-header/section-header.component';
 import { SettingsComponent } from './components/dialogs/settings/settings.component';
 import { BasicMinimalComponent } from './cv-templates/basic-minimal/basic-minimal.component';
+import { TemplateCardComponent } from './components/reusable/template-card/template-card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BasicMinimalComponent } from './cv-templates/basic-minimal/basic-minima
     NewComponent,
     SectionHeaderComponent,
     SettingsComponent,
-    BasicMinimalComponent
+    BasicMinimalComponent,
+    TemplateCardComponent
   ],
   imports: [
     BrowserModule,
