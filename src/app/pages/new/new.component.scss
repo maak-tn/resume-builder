@@ -27,11 +27,14 @@
 
         #nameInput {
             font-size: 2rem;
-            width: 100%;
+
+            width: fit-content;
+            min-width: 400px;
         }
 
         #positionInput {
-            width: 100%;
+            width: fit-content;
+            min-width: 400px;
             margin-top: .2rem;
             margin-bottom: 1rem;
         }
@@ -39,8 +42,10 @@
         #bioInput {
             resize: none;
             height: 60px;
-            width: 100%;
-            margin-bottom: 1rem;
+            width: fit-content;
+            min-width: 500px;
+            text-align: justify;
+            margin: 1rem 0;
         }
 
         .slSharedSpace {
@@ -122,10 +127,11 @@
 }
 
 .elementsContainer {
-    border: 1px dashed #262626;
+    width: fit-content;
     position: relative;
+    margin: .4rem 0;
+    border: 1px dashed #262626;
     background-color: #efefef;
-    margin-bottom: .2rem;
 }
 
 .controls {
