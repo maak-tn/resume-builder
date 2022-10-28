@@ -8,8 +8,9 @@ import { BasicMinimalComponent } from './cv-templates/basic-minimal/basic-minima
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'new', component: NewComponent },
-  { path: 'new/:template', component: BasicMinimalComponent },
+  // { path: 'new', component: NewComponent },
+  { path: 'new', component: BasicMinimalComponent },
+  // { path: 'new/:template', component: BasicMinimalComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];
