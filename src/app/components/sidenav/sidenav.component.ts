@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { SettingsComponent } from '../dialogs/settings/settings.component';
-
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
@@ -9,17 +6,7 @@ import { SettingsComponent } from '../dialogs/settings/settings.component';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
-  ngOnInit(): void {
-  }
-
-  openSettingsDialog() {
-    const dialogRef = this.dialog.open(SettingsComponent);
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-
+  ngOnInit(): void { }
 }

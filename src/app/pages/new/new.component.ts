@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Form, FormGroup, FormBuilder, FormArray } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+
+// COMPONENTS
+import { SettingsComponent } from 'src/app/components/dialogs/settings/settings.component';
+
+// SERVICES
 import { SharedService } from 'src/app/services/shared/shared.service';
 
 @Component({
@@ -12,7 +18,8 @@ export class NewComponent implements OnInit {
   paperForm!: FormGroup;
   constructor(
     private fb: FormBuilder,
-    public ss: SharedService
+    public ss: SharedService,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit(): void {
@@ -85,5 +92,15 @@ export class NewComponent implements OnInit {
 
   removeGroupFromExpeienceArray(index: number) {
     this.geExpeienceFormArray.removeAt(index);
+  }
+
+
+  // GENERAL BEHAVIOR
+  openSettingsDialog() {
+    const dialogRef = this.dialog.open(SettingsComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }
