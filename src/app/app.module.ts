@@ -13,6 +13,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NewComponent } from './pages/new/new.component';
 import { SectionHeaderComponent } from './components/reusable/section-header/section-header.component';
 import { SettingsComponent } from './components/dialogs/settings/settings.component';
+import { BasicMinimalComponent } from './cv-templates/basic-minimal/basic-minimal.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SettingsComponent } from './components/dialogs/settings/settings.compon
     SidenavComponent,
     NewComponent,
     SectionHeaderComponent,
-    SettingsComponent
+    SettingsComponent,
+    BasicMinimalComponent
   ],
   imports: [
     BrowserModule,
