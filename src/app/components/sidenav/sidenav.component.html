@@ -1,9 +1,20 @@
-<div id="sidenavContainer">
-    <button mat-flat-button routerLink="/home">
+<mat-list>
+    <mat-list-item routerLink="/home">
         <mat-icon>description</mat-icon>
-    </button>
+        <span>List</span>
+    </mat-list-item>
 
-    <button mat-flat-button routerLink="/new">
+    <mat-divider></mat-divider>
+
+    <mat-list-item routerLink="/new">
         <mat-icon>note_add</mat-icon>
-    </button>
-</div>
+        <span>New</span>
+    </mat-list-item>
+
+    <mat-divider></mat-divider>
+
+    <mat-list-item disabled>
+        <mat-icon>folder_open</mat-icon>
+        <span>Templates</span>
+    </mat-list-item>
+</mat-list>
